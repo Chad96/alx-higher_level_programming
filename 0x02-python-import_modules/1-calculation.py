@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-a = 10
-b = 5
-calculator_1 = __import__("calculator_1")
-
-add_result = calculator_1.add(a, b)
-sub_result = calculator_1.sub(a, b)
-mul_result = calculator_1.mul(a, b)
-div_result = calculator_1.div(a, b)
-
-print("{:d} + {:d} = {:d}".format(a, b, add_result))
-print("{:d} - {:d} = {:d}".format(a, b, sub_result))
-print("{:d} * {:d} = {:d}".format(a, b, mul_result))
-print("{:d} / {:d} = {:d}".format(a, b, div_result))
+if __name__ == '__main__':
+    from calculator_1 import add, sub, mul, div
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
