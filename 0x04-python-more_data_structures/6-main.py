@@ -1,4 +1,10 @@
 #!/usr/bin/python3
-def print_sorted_dictionary(my_dict):
-    for k in sorted(my_dict.keys()):
-        print("{}: {}".format(k, my_dict[k]))
+from 6-print_sorted_dictionary import print_sorted_dictionary
+
+a_dictionary = {
+    'language': "C",
+    'Number': 89,
+    'track': "Low level",
+    'ids': [1, 2, 3]
+}
+print_sorted_dictionary(a_dictionary)
