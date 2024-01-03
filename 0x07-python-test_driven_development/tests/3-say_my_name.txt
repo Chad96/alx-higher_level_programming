@@ -1,0 +1,23 @@
+# Test case with both first name and last name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test case with both first name and last name
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+# Test case with only first name
+>>> say_my_name("Bob")
+My name is Bob
+
+# Test case with non-string first name
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test case with non-string last name
+>>> say_my_name("John", 123)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
