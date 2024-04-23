@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require("request");
+const request = require('request');
 
 const apiUrl = process.argv[2];
 
@@ -23,13 +23,13 @@ request(apiUrl, function (error, response, body) {
 
       const output = `{${Object.entries(completed)
         .map(([key, value]) => ` '${key}': ${value}`)
-        .join(",\n ")} }`;
+        .join(',\n ')} }`;
 
       console.log(Object.keys(completed).length > 2 ? output : completed);
     } catch (parseError) {
-      console.error("Error parsing JSON:", parseError);
+      console.error('Error parsing JSON:', parseError);
     }
   } else {
-    console.error("Error:", error);
+    console.error('Error:', error);
   }
 });
